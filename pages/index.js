@@ -33,9 +33,9 @@ export default function Index() {
                 <section className='flex justify-center items-center flex-col p-5'>
                     <h1 className='font-merriweather font-bold text-5xl md:text-7xl max-w-7xl text-center text-gray-700 mt-16'>Church Management Software That Works.</h1>
                     <p className='text-gray-700 text-lg mt-7 max-w-4xl'>
-                        We think church software should make ministry easier, not harder. You shouln't have
+                        We think church software should make ministry easier, not harder. You shouln&apos;t have
                         to hire engineers to create sign-up forms. Stop sinking with your current ChMS and
-                        Breathe easy knowing we'll take care of the details.
+                        Breathe easy knowing we&apos;ll take care of the details.
                     </p>
                     <div className='flex justify-center mt-5'>
                         {
