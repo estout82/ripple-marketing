@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
+import Script from 'next/script'
 
 export default function Index() {
     const [showForm, setShowForm] = useState(false);
@@ -27,7 +27,24 @@ export default function Index() {
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
                 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
 
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-6GR9LKPZRH"></script>
+                <Script
+                    strategy="afterInteractive"
+                    src={`https://www.googletagmanager.com/gtag/js?id=G-6GR9LKPZRH`}
+                />
+
+                <Script
+                    id="gtag-init"
+                    strategy="afterInteractive"
+                    dangerouslySetInnerHTML={{
+                    __html: `
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-6GR9LKPZRH');
+                    `,
+                    }}
+                />
+
 
             </Head>
 
