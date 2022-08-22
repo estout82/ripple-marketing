@@ -1,10 +1,17 @@
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 
 export default function Index() {
     const [showForm, setShowForm] = useState(false);
+
+    useEffect(() => {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6GR9LKPZRH');
+    }, []);
 
     function handleKeepMeUpdatedClick() {
         setShowForm(true);
@@ -18,7 +25,10 @@ export default function Index() {
                 <link rel="icon" href="/favicon.ico" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-                <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet" /> 
+                <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
+
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-6GR9LKPZRH"></script>
+
             </Head>
 
             <header className='h-16 w-full py-5 md:py-10 px-5'>
